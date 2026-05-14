@@ -157,13 +157,16 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .s10-note{font-size:12px;color:var(--mid);text-align:center;line-height:1.7}
 .s10-img{overflow:hidden;aspect-ratio:4/5;margin-top:40px}
 .s10-img img{width:100%;height:100%;object-fit:cover;object-position:center 15%;filter:brightness(0.94) contrast(1.04)}
-.s11{background:var(--ink);padding:100px 56px;text-align:center}
-.s11-in{max-width:500px;margin:0 auto}
+.s11{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;overflow:hidden;padding:100px 56px;text-align:center}
+.s11-bg{position:absolute;inset:0;z-index:0}
+.s11-bg img{width:100%;height:100%;object-fit:cover;object-position:center 45%}
+.s11-overlay{position:absolute;inset:0;z-index:1;background:linear-gradient(to bottom,rgba(10,8,6,0.55) 0%,rgba(10,8,6,0.8) 60%,rgba(10,8,6,0.92) 100%)}
+.s11-in{position:relative;z-index:2;max-width:500px;margin:0 auto}
 .s11 h2{font-family:var(--serif);font-size:clamp(40px,5.2vw,64px);font-weight:300;font-style:italic;color:var(--off);line-height:1.12;margin-bottom:22px}
-.s11 p{font-size:15px;color:#4a4845;line-height:1.88;margin-bottom:48px}
+.s11 p{font-size:15px;color:#6a6865;line-height:1.88;margin-bottom:48px}
 .s11-cta{display:inline-block;font-size:10px;letter-spacing:0.24em;text-transform:uppercase;color:var(--off);text-decoration:none;border-bottom:0.5px solid #2c2a28;padding-bottom:7px;transition:border-color 0.25s}
 .s11-cta:hover{border-color:#8a8580}
-.s11-domain{margin-top:80px;font-family:var(--serif);font-size:11px;letter-spacing:0.22em;text-transform:uppercase;color:#222}
+.s11-domain{margin-top:80px;font-family:var(--serif);font-size:11px;letter-spacing:0.22em;text-transform:uppercase;color:#3a3734}
 @media(max-width:860px){
   nav{padding:0 20px}.nav-links{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:#0F0E0C;z-index:190;flex-direction:column;align-items:center;justify-content:center;gap:32px}.nav-links.open{display:flex}.nav-ham{display:flex;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:8px;z-index:210}.nav-ham span{display:block;width:22px;height:1px;background:var(--off);transition:all 0.25s}
   .s01-content{padding:0 24px 72px}
@@ -201,22 +204,19 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .s-social-link{font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#4a4845;text-decoration:none;transition:color 0.2s}
 .s-social-link:hover{color:var(--off)}
 .s-social-divider{display:block;width:1px;height:12px;background:#2a2826}
-/* ── fire full-bleed section ── */
-.s-fire{width:100%;height:70vh;overflow:hidden}
-.s-fire img{width:100%;height:100%;object-fit:cover;object-position:center 40%;display:block}
 /* ── s10 section header prominence ── */
 .s10 .s-label{color:var(--mid);margin-bottom:12px}
 .s10-title{color:var(--ink)}
 /* ── s10 CTA wrapper ── */
 .s10-cta-wrap{margin-bottom:12px}
 @media(max-width:860px){
+  .s11{padding:80px 24px}
   .nav-ham{display:flex}
   .s01-content{padding:0 24px 72px}
   .s01 h1{font-size:clamp(36px,10vw,56px)}
   .s-social{padding:24px 24px}
   .s-social-in{flex-direction:column;align-items:flex-start;gap:16px}
   .s-social-divider{display:none}
-  .s-fire{height:50vh}
   .s05-q{padding:36px 28px}
   .s10-grid{grid-template-columns:1fr}
 }
@@ -418,13 +418,10 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
   <div class="wrap s-social-in">
     <a href="https://instagram.com/sacredjourneys.co" class="s-social-link" target="_blank">Instagram &nbsp;@sacredjourneys.co &rarr;</a>
     <span class="s-social-divider"></span>
-    <a href="https://wa.me/message/sacredjourneys" class="s-social-link" target="_blank">Join the WhatsApp community &rarr;</a>
+    <a href="https://chat.whatsapp.com/ERDXHe0RMVvFn9cEo3jZOs?mode=gi_t" class="s-social-link" target="_blank">Join the WhatsApp community &rarr;</a>
   </div>
 </section>
 
-<section class="s-fire">
-  <img src="img-fire.jpg" alt="Sacred Journeys ceremony gathering">
-</section>
 
 
 <section class="s10" id="s10">
@@ -456,6 +453,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 </section>
 
 <section class="s11" id="s11">
+  <div class="s11-bg"><img src="img-fire.jpg" alt=""></div>
+  <div class="s11-overlay"></div>
   <div class="s11-in reveal">
     <h2>Return home<br>to yourself.</h2>
     <p>If any of this landed, send Trevor a message. That is the only next step.</p>
