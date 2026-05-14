@@ -138,15 +138,17 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .s09-stats{display:flex;gap:72px;border-top:0.5px solid #181614;padding-top:44px}
 .s09-sn{font-family:var(--serif);font-size:48px;font-weight:300;line-height:1;margin-bottom:8px}
 .s09-sl{font-size:12px;color:#2e2c2a}
-.s10{background:#ffffff;padding:100px 56px;border-top:none}
-.s10-grid{display:grid;grid-template-columns:6fr 5fr;gap:80px;align-items:start}
-.s10-title{font-family:var(--serif);font-size:clamp(52px,6.5vw,88px);font-weight:300;line-height:1.0;margin:8px 0 8px}
-.s10-loc{font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--mid);margin-bottom:36px}
-.s10-desc{font-size:15px;color:#3c3a38;line-height:1.9;margin-bottom:36px}
-.s10-proof{margin-bottom:36px;padding:24px 28px;border-left:1.5px solid var(--faint)}
+.s10{background:#ffffff;padding:0}
+.s10-img-full{width:100%;height:55vh;overflow:hidden}
+.s10-img-full img{width:100%;height:100%;object-fit:cover;object-position:center 18%;filter:brightness(0.92) contrast(1.04)}
+.s10-center{padding:80px 56px;display:flex;flex-direction:column;align-items:center;text-align:center}
+.s10-title{font-family:var(--serif);font-size:clamp(52px,6.5vw,88px);font-weight:300;line-height:1.0;margin:8px 0 8px;color:var(--ink)}
+.s10-loc{font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--mid);margin-bottom:28px}
+.s10-desc{font-size:15px;color:#3c3a38;line-height:1.9;margin-bottom:32px;max-width:560px}
+.s10-proof{margin-bottom:36px;padding:24px 28px;border-left:1.5px solid var(--faint);text-align:left;max-width:480px;width:100%}
 .s10-proof blockquote{font-family:var(--serif);font-size:16px;font-style:italic;color:var(--mid);line-height:1.58;margin-bottom:10px}
 .s10-proof cite{font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--faint);font-style:normal}
-.s10-facts{display:grid;grid-template-columns:1fr 1fr;border:0.5px solid var(--faint);margin-bottom:44px}
+.s10-facts{display:grid;grid-template-columns:1fr 1fr;border:0.5px solid var(--faint);margin-bottom:44px;max-width:480px;width:100%;text-align:left}
 .s10-fact{padding:20px 22px;border-right:0.5px solid var(--faint);border-bottom:0.5px solid var(--faint)}
 .s10-fact:nth-child(2n){border-right:none}
 .s10-fact:nth-last-child(-n+2){border-bottom:none}
@@ -170,7 +172,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 @media(max-width:860px){
   nav{padding:0 20px}.nav-links{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:#0F0E0C;z-index:190;flex-direction:column;align-items:center;justify-content:center;gap:32px}.nav-links.open{display:flex}.nav-ham{display:flex;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:8px;z-index:210}.nav-ham span{display:block;width:22px;height:1px;background:var(--off);transition:all 0.25s}
   .s01-content{padding:0 24px 72px}
-  .s02,.s03,.s04,.s05,.s06,.s07,.s08,.s09,.s10,.s11{padding:60px 24px}
+  .s02,.s03,.s04,.s05,.s06,.s07,.s08,.s09,.s11{padding:60px 24px}
+  .s10-center{padding:60px 24px}
   .s02-grid,.s04-grid,.s06-grid,.s09-top,.s10-grid{grid-template-columns:1fr;gap:44px}
   .s04-left{padding-right:0}.s04-right{padding-left:0;border-left:none;padding-top:36px;border-top:0.5px solid #1c1a18}
   .s03-four{grid-template-columns:1fr 1fr}
@@ -425,29 +428,27 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 
 
 <section class="s10" id="s10">
-  <div class="wrap">
-    <div class="s10-grid">
-      <div class="reveal">
-        <span class="s-label">Next retreat</span>
-        <div class="s10-title">November<br>2026</div>
-        <div class="s10-loc">Puerto Escondido, Mexico</div>
-        <p class="s10-desc">Humberto holding ceremony. Aleck and Allie holding integration. A small group of people brought together with intention. The container that continues when you return home.</p>
-        <div class="s10-proof">
-          <blockquote>"Not only the most meaningful event of 2025 but the most meaningful in my life by far."</blockquote>
-          <cite>&mdash; Harvie, October 2025</cite>
-        </div>
-        <div class="s10-facts">
-          <div class="s10-fact"><div class="s10-fl">Dates</div><div class="s10-fv">Late November 2026</div></div>
-          <div class="s10-fact"><div class="s10-fl">Capacity</div><div class="s10-fv">10&ndash;15 people</div></div>
-          <div class="s10-fact"><div class="s10-fl">Investment</div><div class="s10-fv">$2,000&ndash;3,000 USD</div></div>
-          <div class="s10-fact"><div class="s10-fl">Location</div><div class="s10-fv">Puerto Escondido</div></div>
-        </div>
-        <a href="https://instagram.com/sacredjourneys.co" class="s10-cta" target="_blank">Message Trevor on Instagram</a>
-        <p class="s10-note">No forms. No checkout links. A conversation.<br>The right people find this through alignment.</p>
+  <div class="s10-img-full reveal">
+    <img src="img-retreat.jpg" alt="Sacred Journeys retreat">
+  </div>
+  <div class="s10-center">
+    <div class="reveal">
+      <span class="s-label">Next retreat</span>
+      <div class="s10-title">November<br>2026</div>
+      <div class="s10-loc">Puerto Escondido, Mexico</div>
+      <p class="s10-desc">Humberto holding ceremony. Aleck and Allie holding integration. A small group of people brought together with intention. The container that continues when you return home.</p>
+      <div class="s10-proof">
+        <blockquote>"Not only the most meaningful event of 2025 but the most meaningful in my life by far."</blockquote>
+        <cite>&mdash; Harvie, October 2025</cite>
       </div>
-      <div class="reveal" style="transition-delay:120ms">
-        <div class="s10-img"><img src="img-retreat.jpg" alt="Sacred Journeys retreat"></div>
+      <div class="s10-facts">
+        <div class="s10-fact"><div class="s10-fl">Dates</div><div class="s10-fv">Late November 2026</div></div>
+        <div class="s10-fact"><div class="s10-fl">Capacity</div><div class="s10-fv">10&ndash;15 people</div></div>
+        <div class="s10-fact"><div class="s10-fl">Investment</div><div class="s10-fv">$2,000&ndash;3,000 USD</div></div>
+        <div class="s10-fact"><div class="s10-fl">Location</div><div class="s10-fv">Puerto Escondido</div></div>
       </div>
+      <a href="https://instagram.com/sacredjourneys.co" class="s10-cta" target="_blank">Message Trevor on Instagram</a>
+      <p class="s10-note">No forms. No checkout links. A conversation.<br>The right people find this through alignment.</p>
     </div>
   </div>
 </section>
