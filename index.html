@@ -56,15 +56,16 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .s03-phil{max-width:580px;border-left:1.5px solid var(--ink);padding-left:26px}
 .s03-phil p{font-family:var(--serif);font-size:clamp(19px,2.2vw,25px);font-weight:300;line-height:1.5;color:var(--ink)}
 .s03-phil strong{font-weight:400}
-.s04{background:var(--ink);color:var(--off);padding:100px 56px 0}
+.s04{background:var(--ink);color:var(--off);padding:100px 56px;position:relative}
+.s04-scene{position:absolute;inset:0;overflow:hidden;z-index:0}
+.s04-scene img{width:100%;height:100%;object-fit:cover;object-position:center 30%;opacity:0.11;filter:saturate(0.5)}
+.s04 .wrap{position:relative;z-index:1}
 .s04-grid{display:grid;grid-template-columns:5fr 7fr;gap:0;align-items:start}
 .s04-left{padding-right:56px}
 .s04-left .s-label{color:#3a3734}
 .s04 h2{font-family:var(--serif);font-size:clamp(34px,3.8vw,52px);font-weight:300;line-height:1.08;margin-top:8px;margin-bottom:32px}
 .s04 h2 em{font-style:italic}
 .s04-origin{font-size:13px;color:#4a4845;line-height:1.88;border-left:0.5px solid #242220;padding-left:20px;margin-bottom:36px}
-.s04-full-img{margin-top:72px;height:420px;overflow:hidden}
-.s04-full-img img{width:100%;height:100%;object-fit:cover;object-position:center 35%;filter:brightness(0.82) contrast(1.05) saturate(0.92)}
 .s04-right{padding-left:56px;border-left:0.5px solid #1c1a18}
 .s04-right p{font-size:15px;line-height:1.9;color:#6a6865;margin-bottom:22px}
 .s04-right p:last-of-type{margin-bottom:0}
@@ -81,7 +82,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .s05-q blockquote{font-family:var(--serif);font-size:20px;font-weight:300;font-style:italic;color:var(--ink);line-height:1.58;margin-bottom:18px}
 .s05-q cite{font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--mid);font-style:normal;display:block;margin-top:4px}
 .s05-photo{overflow:hidden;min-height:400px;position:relative}
-.s05-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 15%}
+.s05-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 55%}
 .s05-stats{display:flex;gap:60px;border-top:0.5px solid var(--faint);padding-top:40px}
 .s05-sn{font-family:var(--serif);font-size:48px;font-weight:300;line-height:1;margin-bottom:8px}
 .s05-sd{font-size:12px;color:var(--mid);max-width:200px;line-height:1.65}
@@ -294,6 +295,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 </section>
 
 <section class="s04" id="s04">
+  <div class="s04-scene"><img src="img-origin.jpg" alt=""></div>
   <div class="wrap">
     <div class="s04-grid reveal">
       <div class="s04-left">
@@ -308,9 +310,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
         <p>This is initiation into your next chapter. Not a reset. Not a vacation. Not spiritual tourism.</p>
         <div class="s04-pull"><p>"The container goes into the wound. Not around it. You do not come here to escape. You come here to finally face what is real."</p></div>
       </div>
-    </div>
-    <div class="s04-full-img reveal">
-      <img src="img-origin.jpg" alt="Participants preparing the ceremony altar">
     </div>
   </div>
 </section>
