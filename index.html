@@ -65,7 +65,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .s04-left .s-label{color:#555250}
 .s04 h2{font-family:var(--serif);font-size:clamp(34px,3.8vw,52px);font-weight:300;line-height:1.08;margin-top:8px;margin-bottom:32px}
 .s04 h2 em{font-style:italic}
-.s04-origin{font-size:13px;color:#7a7875;line-height:1.88;border-left:0.5px solid #242220;padding-left:20px;margin-bottom:36px}
+.s04-origin{font-size:15px;color:#7a7875;line-height:1.88;border-left:0.5px solid #242220;padding-left:20px;margin-bottom:36px}
 .s04-right{padding-left:56px;border-left:0.5px solid #2c2a28}
 .s04-right p{font-size:15px;line-height:1.9;color:#888583;margin-bottom:22px}
 .s04-right p:last-of-type{margin-bottom:0}
@@ -244,7 +244,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 
 /* ── s-break full-bleed quote ── */
 .s-break{background:#080705;padding:140px 56px;text-align:center}
-.s-break blockquote{font-family:var(--serif);font-size:clamp(26px,3.6vw,52px);font-weight:300;font-style:italic;color:var(--off);line-height:1.38;max-width:800px;margin:0 auto}
+.s-break blockquote{font-family:var(--serif);font-size:clamp(22px,3vw,43px);font-weight:300;font-style:italic;color:var(--off);line-height:1.22;max-width:800px;margin:0 auto}
 @media(max-width:860px){.s-break{padding:80px 24px}}
 
 /* ── s03 vertical stacked problem blocks ── */
@@ -258,6 +258,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 
 /* ── s05 stats larger numbers ── */
 .s05-sn{font-family:var(--serif);font-size:clamp(72px,9vw,110px);font-weight:300;line-height:1;margin-bottom:14px}
+@media(min-width:861px){.s05-sn{font-size:clamp(44px,5.4vw,66px)}}
 .s05-stats{display:flex;gap:80px;border-top:0.5px solid var(--faint);padding-top:72px;padding-bottom:16px}
 @media(max-width:860px){.s05-stats{gap:40px;padding-top:56px}}
 
@@ -272,6 +273,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .s-walk{width:100%;height:65vh;overflow:hidden;margin:0;padding:0;display:block;line-height:0}
 .s-walk img{width:100%;height:100%;object-fit:cover;object-position:center 40%;display:block}
 @media(max-width:860px){.s-walk{height:50vh}}
+@media(max-width:860px){.s10{display:flex;flex-direction:column}.s10-img-full{order:2}.s10-center{order:1}}
 
 /* ── s09 events card grid ── */
 .s09-ev-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:#1c1a18;margin-top:8px}
@@ -343,7 +345,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
       <div class="s04-left">
         <span class="s-label">The origin.</span>
         <h2>Built from<br>surrender.<br><em>Not strategy.</em></h2>
-        <div class="s04-origin">Sacred Journeys was not built from strategy. It was built from surrender. A Bufo dream, a name that appeared in it, and all the alignments after falling into place to make the first retreat six months later. The shift from force to flow is embedded in the DNA of this brand. It is not a concept. It is the origin story.</div>
+        <div class="s04-origin">Sacred Journeys started from a Bufo dream. A name that appeared in it, and all the alignments after falling into place to make the first retreat six months later. The shift from force to flow is embedded in the DNA of this brand. It is not a concept. It is the origin story.</div>
       </div>
       <div class="s04-right">
         <p>We create containers where people reconnect to their truth, dissolve unconscious patterns, and return home to themselves. Through sacred medicine, conscious community, and structured integration.</p>
@@ -356,7 +358,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 </section>
 
 <section class="s-break">
-  <blockquote class="reveal">"The container goes into the wound.<br>Not around it.<br><br>You do not come here to escape.<br>You come here to finally face what is real."</blockquote>
+  <blockquote class="reveal">The container goes into the wound.<br>Not around it.<br>You do not come here to escape.<br>You come here to finally face what is real.</blockquote>
 </section>
 
 <section class="s05" id="s05">
@@ -456,11 +458,11 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
   <div class="s09-ev-grid">
     <div class="s09-ev-card">
       <svg class="s09-ev-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
-      <div><div class="s09-ev-card-name">Music &amp; Mantras</div><div class="s09-ev-card-desc">Monthly sunset gathering of live music and devotional song</div></div>
+      <div><div class="s09-ev-card-name">Music &amp; Mantras</div><div class="s09-ev-card-desc">Monthly sunset gathering of live music and devotional jam</div></div>
     </div>
     <div class="s09-ev-card">
       <svg class="s09-ev-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
-      <div><div class="s09-ev-card-name">Wellness Saturdays</div><div class="s09-ev-card-desc">Weekly movement and health sessions with Aleck, in season</div></div>
+      <div><div class="s09-ev-card-name">Wellness Saturdays</div><div class="s09-ev-card-desc">Weekly breathwork, cold plunge, and sound healing sessions with Aleck. In season.</div></div>
     </div>
     <div class="s09-ev-card">
       <svg class="s09-ev-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M9 7c1.5 0 3 1 3 2.5S10.5 12 9 12H3"/><path d="M12 17c1.5 0 3-1 3-2.5S13.5 12 12 12H3"/></svg>
@@ -472,7 +474,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
     </div>
     <div class="s09-ev-card">
       <svg class="s09-ev-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M16.24 7.76l-2.12 6.36-6.36 2.12 2.12-6.36 6.36-2.12z"/></svg>
-      <div><div class="s09-ev-card-name">Workshops</div><div class="s09-ev-card-desc">Rotating topics on transformation and conscious living</div></div>
+      <div><div class="s09-ev-card-name">Workshops</div><div class="s09-ev-card-desc">Rotating topics, certifications, men's and women's work.</div></div>
     </div>
     <div class="s09-ev-card">
       <svg class="s09-ev-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
@@ -481,6 +483,10 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
     <div class="s09-ev-card">
       <svg class="s09-ev-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5" fill="currentColor" stroke="none"/></svg>
       <div><div class="s09-ev-card-name">Rapé Circles</div><div class="s09-ev-card-desc">Traditional plant medicine circles, held seasonally</div></div>
+    </div>
+    <div class="s09-ev-card">
+      <svg class="s09-ev-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
+      <div><div class="s09-ev-card-name">Entrepreneur Days</div><div class="s09-ev-card-desc">Co-working, masterminds, and entrepreneurship sessions</div></div>
     </div>
   </div>
 </div>
