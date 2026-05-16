@@ -238,6 +238,43 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
   .s05-q{padding:36px 28px}
   .s10-grid{grid-template-columns:1fr}
 }
+
+/* ── s02-statement ── */
+.s02-statement{font-family:var(--serif);font-size:clamp(22px,2.8vw,34px);font-weight:300;font-style:italic;color:var(--ink);line-height:1.32;margin-top:48px;padding-top:40px;border-top:0.5px solid var(--faint);max-width:unset}
+
+/* ── s-break full-bleed quote ── */
+.s-break{background:#080705;padding:140px 56px;text-align:center}
+.s-break blockquote{font-family:var(--serif);font-size:clamp(26px,3.6vw,52px);font-weight:300;font-style:italic;color:var(--off);line-height:1.38;max-width:800px;margin:0 auto}
+@media(max-width:860px){.s-break{padding:80px 24px}}
+
+/* ── s03 vertical stacked problem blocks ── */
+.s03-four{display:flex;flex-direction:column;border:none;border-top:0.5px solid var(--faint);margin:44px 0 80px}
+.s03-item{padding:68px 0;border-right:none;border-bottom:0.5px solid var(--faint);display:grid;grid-template-columns:80px 1fr;grid-template-rows:auto auto;gap:0 48px;align-items:start}
+.s03-item:last-child{border-bottom:0.5px solid var(--faint)}
+.s03-n{font-size:42px;grid-column:1;grid-row:1/3;padding-top:4px;margin-bottom:0}
+.s03-title{grid-column:2;grid-row:1}
+.s03-desc{grid-column:2;grid-row:2;margin-top:8px}
+@media(max-width:860px){.s03-item{grid-template-columns:56px 1fr;gap:0 24px;padding:48px 0}.s03-item:last-child{border-bottom:0.5px solid var(--faint)}.s03-item:nth-last-child(-n+2){border-bottom:0.5px solid var(--faint)}}
+
+/* ── s05 stats larger numbers ── */
+.s05-sn{font-family:var(--serif);font-size:clamp(72px,9vw,110px);font-weight:300;line-height:1;margin-bottom:14px}
+.s05-stats{display:flex;gap:80px;border-top:0.5px solid var(--faint);padding-top:72px;padding-bottom:16px}
+@media(max-width:860px){.s05-stats{gap:40px;padding-top:56px}}
+
+/* ── s08 container steps ghost numbers ── */
+.s08-phase{padding:76px 40px 60px;border-right:0.5px solid var(--faint);position:relative;overflow:hidden;min-height:300px}
+.s08-n{position:absolute;top:12px;left:20px;font-family:var(--serif);font-size:clamp(110px,13vw,168px);font-weight:300;color:var(--faint);opacity:0.55;line-height:1;margin-bottom:0;pointer-events:none;user-select:none}
+.s08-name{position:relative;z-index:1;font-family:var(--serif);font-size:22px;font-weight:400;margin-top:80px;margin-bottom:14px}
+.s08-desc{position:relative;z-index:1;font-size:13px;color:var(--mid);line-height:1.82}
+@media(max-width:860px){.s08-phase{padding:60px 28px 48px;border-right:none;border-bottom:0.5px solid var(--faint)}.s08-phase:last-child{border-bottom:none}.s08-n{font-size:clamp(90px,22vw,130px)}.s08-name{margin-top:60px}}
+
+/* ── s09 events card grid ── */
+.s09-ev-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:#1c1a18;margin-top:8px}
+.s09-ev-card{background:var(--ink);padding:22px 18px;display:flex;align-items:flex-start;gap:14px}
+.s09-ev-icon{flex-shrink:0;width:18px;height:18px;opacity:0.42;color:var(--off);margin-top:3px}
+.s09-ev-card-name{font-family:var(--serif);font-size:15px;font-weight:400;color:var(--off);margin-bottom:4px;line-height:1.2}
+.s09-ev-card-desc{font-size:11px;color:#555250;line-height:1.65}
+@media(max-width:860px){.s09-ev-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -258,7 +295,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
   <div class="s01-overlay"></div>
   <div class="s01-content">
     <p class="s01-eyebrow reveal">Puerto Escondido, Mexico</p>
-    <h1 class="reveal" style="transition-delay:100ms">You have built<br>something real.<br><em>And something<br>still feels<br>like it's missing.</em></h1>
+    <h1 class="reveal" style="transition-delay:100ms">You have built<br>something real.<br><em>Something is<br>still missing.</em></h1>
     <a href="#s11" class="s01-cta reveal" style="transition-delay:200ms">Start a conversation &rarr;</a>
   </div>
   <div class="s01-chevron"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="6 9 12 15 18 9"/></svg></div>
@@ -275,7 +312,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
         <p>You have done the work. The books, the podcasts, the masterminds. You are self-aware. You know the patterns. You keep circling the same ceiling.</p>
         <p>Externally, everything looks right. Something is quiet inside that has been quiet for a while. Not broken. Not dramatic. Just not fully alive.</p>
         <p>You want inner peace. Real self-trust. A community that goes deeper than the surface. You want to stop performing and come home to yourself.</p>
-        <p>You do not need more information. You need experience.</p>
+        <p class="s02-statement">You do not need more information. You need experience.</p>
       </div>
     </div>
   </div>
@@ -299,8 +336,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
   <div class="wrap">
     <div class="s04-grid reveal">
       <div class="s04-left">
-        <span class="s-label">What this is</span>
-        <h2>Not a retreat<br>company.<br><em>A transformational<br>initiation space.</em></h2>
+        <span class="s-label">The origin.</span>
+        <h2>Built from<br>surrender.<br><em>Not strategy.</em></h2>
         <div class="s04-origin">Sacred Journeys was not built from strategy. It was built from surrender. A Bufo dream, a name that appeared in it, and all the alignments after falling into place to make the first retreat six months later. The shift from force to flow is embedded in the DNA of this brand. It is not a concept. It is the origin story.</div>
       </div>
       <div class="s04-right">
@@ -308,10 +345,13 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
         <p>We are not selling ceremonies. We are facilitating remembrance.</p>
         <p>Small capacity. Intentional curation. A shaman with nearly a decade of experience and over 500 ceremonies, trained in the Shipibo tradition in Peru. A living community that does not end when the retreat does.</p>
         <p>This is initiation into your next chapter. Not a reset. Not a vacation. Not spiritual tourism.</p>
-        <div class="s04-pull"><p>"The container goes into the wound. Not around it. You do not come here to escape. You come here to finally face what is real."</p></div>
       </div>
     </div>
   </div>
+</section>
+
+<section class="s-break">
+  <blockquote class="reveal">"The container goes into the wound.<br>Not around it.<br><br>You do not come here to escape.<br>You come here to finally face what is real."</blockquote>
 </section>
 
 <section class="s05" id="s05">
@@ -351,7 +391,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
         <p>I did not build Sacred Journeys from strategy. I built it from a dream I could not shake and a calling I could not explain. That dream led me to Guadalajara, where I met Humberto. The team came together and six months later, we hosted our first retreat.</p>
         <p>I am not the facilitator. I am the vision-holder, the container-builder, and a participant in ceremony alongside everyone else. I walk the path. That distinction matters.</p>
         <p>My personal shift from force to flow is the transmission this brand is built on. I have lived the gap between external success and internal alignment. I built from the other side of it.</p>
-        <p>I do not present as a guru. I present as someone walking the same path, holding the container so others can do the same work.</p>
         <div class="s06-role">Visionary &nbsp;/&nbsp; Curator &nbsp;/&nbsp; Participant &nbsp;/&nbsp; Not the facilitator</div>
       </div>
     </div>
@@ -409,14 +448,37 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
         <a href="#s11" class="s09-join">Join the community &rarr;</a>
       </div>
       <div>
-        <div class="s09-ev"><span class="s09-ev-name">Music and Mantras</span><span class="s09-ev-freq">Monthly</span></div>
-        <div class="s09-ev"><span class="s09-ev-name">Wellness Saturdays</span><span class="s09-ev-freq">Weekly in season</span></div>
-        <div class="s09-ev"><span class="s09-ev-name">Breathwork Sessions</span><span class="s09-ev-freq">Regular</span></div>
-        <div class="s09-ev"><span class="s09-ev-name">Sound Journeys</span><span class="s09-ev-freq">Regular</span></div>
-        <div class="s09-ev"><span class="s09-ev-name">Workshops</span><span class="s09-ev-freq">Regular</span></div>
-        <div class="s09-ev"><span class="s09-ev-name">Community Dinners</span><span class="s09-ev-freq">Regular</span></div>
-        <div class="s09-ev"><span class="s09-ev-name">Rap&eacute; Circles</span><span class="s09-ev-freq">Seasonal</span></div>
-      </div>
+  <div class="s09-ev-grid">
+    <div class="s09-ev-card">
+      <svg class="s09-ev-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+      <div><div class="s09-ev-card-name">Music &amp; Mantras</div><div class="s09-ev-card-desc">Monthly sunset gathering of live music and devotional song</div></div>
+    </div>
+    <div class="s09-ev-card">
+      <svg class="s09-ev-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+      <div><div class="s09-ev-card-name">Wellness Saturdays</div><div class="s09-ev-card-desc">Weekly movement and health sessions with Aleck, in season</div></div>
+    </div>
+    <div class="s09-ev-card">
+      <svg class="s09-ev-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M9 7c1.5 0 3 1 3 2.5S10.5 12 9 12H3"/><path d="M12 17c1.5 0 3-1 3-2.5S13.5 12 12 12H3"/></svg>
+      <div><div class="s09-ev-card-name">Breathwork</div><div class="s09-ev-card-desc">Guided breathing for clarity, energy, and emotional release</div></div>
+    </div>
+    <div class="s09-ev-card">
+      <svg class="s09-ev-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M12 6v12M8 9v6M4 11v2M16 9v6M20 11v2"/></svg>
+      <div><div class="s09-ev-card-name">Sound Journeys</div><div class="s09-ev-card-desc">Immersive sound healing and frequency experiences</div></div>
+    </div>
+    <div class="s09-ev-card">
+      <svg class="s09-ev-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M16.24 7.76l-2.12 6.36-6.36 2.12 2.12-6.36 6.36-2.12z"/></svg>
+      <div><div class="s09-ev-card-name">Workshops</div><div class="s09-ev-card-desc">Rotating topics on transformation and conscious living</div></div>
+    </div>
+    <div class="s09-ev-card">
+      <svg class="s09-ev-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+      <div><div class="s09-ev-card-name">Community Dinners</div><div class="s09-ev-card-desc">Shared meals and authentic connection at Casa Las Nubes</div></div>
+    </div>
+    <div class="s09-ev-card">
+      <svg class="s09-ev-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5" fill="currentColor" stroke="none"/></svg>
+      <div><div class="s09-ev-card-name">Rapé Circles</div><div class="s09-ev-card-desc">Traditional plant medicine circles, held seasonally</div></div>
+    </div>
+  </div>
+</div>
     </div>
     <div class="s09-imgs reveal">
       <div class="s09-img-wrap"><img src="img-community-1.jpg" alt="Music and Mantras at Casa Las Nubes"></div>
