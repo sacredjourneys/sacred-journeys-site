@@ -15,6 +15,14 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://wearethemedicine.co/og-image.jpg">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P0KGBN3LWJ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-P0KGBN3LWJ');
+</script>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{--ink:#0F0E0C;--off:#F5F3EE;--warm:#FAFAF7;--mid:#8A8780;--faint:#D4D2CE;--serif:'Cormorant Garamond',Georgia,serif;--sans:'DM Sans',sans-serif}
@@ -170,6 +178,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .s11-cta{display:inline-block;font-size:10px;letter-spacing:0.24em;text-transform:uppercase;color:var(--off);text-decoration:none;border-bottom:0.5px solid #2c2a28;padding-bottom:7px;transition:border-color 0.25s}
 .s11-cta:hover{border-color:#8a8580}
 .s11-domain{margin-top:80px;font-family:var(--serif);font-size:11px;letter-spacing:0.22em;text-transform:uppercase;color:var(--mid)}
+.s11-wa{display:inline-block;margin-top:20px;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#888583;text-decoration:none;border-bottom:0.5px solid #2c2a28;padding-bottom:5px;transition:color 0.2s,border-color 0.2s}
+.s11-wa:hover{color:var(--off);border-color:#555250}
 @media(min-width:861px){
   .s10{display:grid;grid-template-columns:1fr 1fr;min-height:85vh}
   .s10-img-full{height:auto}
@@ -248,13 +258,13 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 @media(max-width:860px){.s-break{padding:80px 24px}}
 
 /* ── s03 vertical stacked problem blocks ── */
-.s03-four{display:flex;flex-direction:column;border:none;border-top:0.5px solid var(--faint);margin:44px 0 80px}
-.s03-item{padding:68px 0;border-right:none;border-bottom:0.5px solid var(--faint);display:grid;grid-template-columns:80px 1fr;grid-template-rows:auto auto;gap:0 48px;align-items:start}
+.s03-four{display:flex;flex-direction:column;border:none;border-top:0.5px solid var(--faint);margin:44px 0 64px}
+.s03-item{padding:44px 0;border-right:none;border-bottom:0.5px solid var(--faint);display:grid;grid-template-columns:72px 1fr;grid-template-rows:auto auto;gap:0 40px;align-items:start}
 .s03-item:last-child{border-bottom:0.5px solid var(--faint)}
-.s03-n{font-size:42px;grid-column:1;grid-row:1/3;padding-top:4px;margin-bottom:0}
-.s03-title{grid-column:2;grid-row:1}
-.s03-desc{grid-column:2;grid-row:2;margin-top:8px}
-@media(max-width:860px){.s03-item{grid-template-columns:56px 1fr;gap:0 24px;padding:48px 0}.s03-item:last-child{border-bottom:0.5px solid var(--faint)}.s03-item:nth-last-child(-n+2){border-bottom:0.5px solid var(--faint)}}
+.s03-n{font-size:46px;grid-column:1;grid-row:1/3;padding-top:2px;margin-bottom:0;color:#c4c2be}
+.s03-title{grid-column:2;grid-row:1;font-family:var(--serif);font-size:clamp(20px,2.2vw,26px);font-style:italic;color:var(--ink);font-weight:300;margin-bottom:0}
+.s03-desc{grid-column:2;grid-row:2;margin-top:10px;font-size:14px;color:#6a6866;line-height:1.72}
+@media(max-width:860px){.s03-item{grid-template-columns:52px 1fr;gap:0 20px;padding:36px 0}.s03-item:last-child{border-bottom:0.5px solid var(--faint)}.s03-item:nth-last-child(-n+2){border-bottom:0.5px solid var(--faint)}}
 
 /* ── s05 stats larger numbers ── */
 .s05-sn{font-family:var(--serif);font-size:clamp(72px,9vw,110px);font-weight:300;line-height:1;margin-bottom:14px}
@@ -281,7 +291,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .s09-ev-icon{flex-shrink:0;width:18px;height:18px;opacity:0.42;color:var(--off);margin-top:3px}
 .s09-ev-card-name{font-family:var(--serif);font-size:15px;font-weight:400;color:var(--off);margin-bottom:4px;line-height:1.2}
 .s09-ev-card-desc{font-size:11px;color:#555250;line-height:1.65}
-@media(max-width:860px){.s09-ev-grid{grid-template-columns:1fr}}
+@media(max-width:480px){.s09-ev-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -303,7 +313,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
   <div class="s01-content">
     <p class="s01-eyebrow reveal">Puerto Escondido, Mexico</p>
     <h1 class="reveal" style="transition-delay:100ms">You have built<br>something real.<br><em>Something is<br>still missing.</em></h1>
-    <a href="#s11" class="s01-cta reveal" style="transition-delay:200ms">Start a conversation &rarr;</a>
+    <a href="#s02" class="s01-cta reveal" style="transition-delay:200ms">See what's possible &darr;</a>
   </div>
   <div class="s01-chevron"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="6 9 12 15 18 9"/></svg></div>
 </section>
@@ -334,7 +344,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
       <div class="s03-item"><div class="s03-n">03</div><div class="s03-title">Awareness without transformation</div><div class="s03-desc">You can name the patterns clearly. They keep running anyway.</div></div>
       <div class="s03-item"><div class="s03-n">04</div><div class="s03-title">Isolation without tribe</div><div class="s03-desc">People around you. Very few who actually see you.</div></div>
     </div>
-    <div class="s03-phil reveal"><p>Most containers end when you leave. <strong>This one is designed for what happens when you return home.</strong> Integration is not an add-on here. It is the architecture.</p></div>
+    <div class="s03-phil reveal"><p>Integration is not an add-on here. <strong>It is the architecture.</strong></p></div>
   </div>
 </section>
 
@@ -413,7 +423,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
         <div class="s07-photo aleck"><img src="img-aleck.jpg" alt="Aleck Urtaza, sound therapist and mindfulness facilitator"></div>
         <div class="s07-name">Aleck Urtaza</div>
         <div class="s07-role">Mindfulness Facilitator &amp; Integration Lead</div>
-        <p class="s07-bio">Sound therapist, musician, breathwork facilitator, and keeper of ancestral instruments. He weaves sound frequencies and conscious breathing into transformative experiences that open the door to self-discovery and inner balance. In the container, he is the grounding presence — holding the field before, during, and long after ceremony. His mission: help others reconnect with themselves through the healing power of breath, music, and presence.</p>
+        <p class="s07-bio">Sound therapist, musician, breathwork facilitator, and keeper of ancestral instruments. He weaves sound frequencies and breath into transformative experiences that open the door to self-discovery and inner balance. In the container, he is the grounding presence — holding the field before, during, and long after ceremony. He helps others reconnect through breath, music, and presence.</p>
       </div>
       <div>
         <div class="s07-photo allie"><img src="img-allie.jpg" alt="Allie Schlener, energetic support and intuitive guide"></div>
@@ -435,7 +445,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
   <div class="wrap">
     <span class="s-label reveal">How the container works</span>
     <div class="s08-phases reveal">
-      <div class="s08-phase"><div class="s08-n">01</div><div class="s08-name">Preparation</div><p class="s08-desc">The work begins before you arrive. Intention setting, preparation guidance, and connection with the team. The ceremony is more powerful when you arrive ready for it.</p></div>
+      <div class="s08-phase"><div class="s08-n">01</div><div class="s08-name">Preparation</div><p class="s08-desc">The work begins before you arrive. Every participant has a personal conversation with the team before being accepted. Intention setting, preparation guidance, and connection with the team. The ceremony is more powerful when everyone in the room is meant to be there.</p></div>
       <div class="s08-phase"><div class="s08-n">02</div><div class="s08-name">Ceremony</div><p class="s08-desc">Seven days in Puerto Escondido. Sacred plant medicine with Humberto. Sound healing and space-holding with Aleck, Allie and Trevor. A small, curated group of people who were meant to be in the room together.</p></div>
       <div class="s08-phase"><div class="s08-n">03</div><div class="s08-name">Integration</div><p class="s08-desc">The ceremony reveals. Integration is where transformation stabilizes. Ongoing community support. A group that stays active. The work does not end when you return home. That is when it begins.</p></div>
     </div>
@@ -450,7 +460,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
         <span class="s-label">Casa Las Nubes, Puerto Escondido</span>
         <h2>Sacred Journeys is more than the retreats.</h2>
         <p>Every week in Puerto Escondido, people gather at the house. Music and Mantras at sunset. Wellness Saturdays with Aleck. Breathwork. Sound journeys. Community dinners. Real connection in a transient town that keeps people coming back.</p>
-        <p>Over 200 people in a WhatsApp group that has been running for over a year. The retreat is one part of something that lives year-round.</p>
+        <p>222 people in a WhatsApp group that has been running for over a year. The retreat is one part of something that lives year-round.</p>
         <p class="s09-feedback">"I wish I found this sooner. This feels like family."</p>
         <a href="#s11" class="s09-join">Join the community &rarr;</a>
       </div>
@@ -486,7 +496,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
     </div>
     <div class="s09-ev-card">
       <svg class="s09-ev-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
-      <div><div class="s09-ev-card-name">Entrepreneur Days</div><div class="s09-ev-card-desc">Co-working, masterminds, and entrepreneurship sessions</div></div>
+      <div><div class="s09-ev-card-name">Coworking Days</div><div class="s09-ev-card-desc">Shared focus sessions, masterminds, and collaborative work for builders</div></div>
     </div>
   </div>
 </div>
@@ -514,7 +524,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 </section>
 
 <section class="s-walk">
-  <img src="img-walk.jpg" alt="">
+  <img src="img-walk.jpg" alt="Walking along the beach at sunset in Puerto Escondido">
 </section>
 
 <section class="s10" id="s10">
@@ -550,6 +560,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
     <h2>Return home<br>to yourself.</h2>
     <p>If any of this landed, send Trevor a message. That is the only next step.</p>
     <a href="https://instagram.com/sacredjourneys.co" class="s11-cta" target="_blank">@sacredjourneys.co &rarr;</a>
+    <a href="https://wa.me/529542061152?text=Hi%20Trevor%2C%20I%20came%20across%20the%20Sacred%20Journeys%20site%20and%20I%27m%20interested%20in%20the%20November%20retreat." class="s11-wa" target="_blank">Or message on WhatsApp &rarr;</a>
     <div class="s11-domain">wearethemedicine.co</div>
   </div>
 </section>
