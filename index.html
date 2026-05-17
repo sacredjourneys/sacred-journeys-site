@@ -269,8 +269,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 /* ── s05 stats larger numbers ── */
 .s05-sn{font-family:var(--serif);font-size:clamp(72px,9vw,110px);font-weight:300;line-height:1;margin-bottom:14px}
 @media(min-width:861px){.s05-sn{font-size:clamp(44px,5.4vw,66px)}}
-.s05-stats{display:flex;gap:80px;border-top:0.5px solid var(--faint);padding-top:72px;padding-bottom:16px}
-@media(max-width:860px){.s05-stats{gap:40px;padding-top:56px}}
+.s05-stats{display:flex;gap:80px;border-top:none;padding-top:16px;border-bottom:0.5px solid var(--faint);padding-bottom:64px;margin-bottom:4px}
+@media(max-width:860px){.s05-stats{gap:40px;padding-top:8px;padding-bottom:48px}}
 
 /* ── s08 container steps ghost numbers ── */
 .s08-phase{padding:76px 40px 60px;border-right:0.5px solid var(--faint);position:relative;overflow:hidden;min-height:300px}
@@ -284,6 +284,12 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .s-walk img{width:100%;height:100%;object-fit:cover;object-position:center 40%;display:block}
 @media(max-width:860px){.s-walk{height:50vh}}
 @media(max-width:860px){.s10{display:flex;flex-direction:column}.s10-img-full{order:2}.s10-center{order:1}}
+
+/* ── s10 includes list ── */
+.s10-includes{list-style:none;margin-bottom:32px;max-width:480px;width:100%;text-align:left}
+.s10-includes li{font-size:12px;color:var(--mid);line-height:1.6;padding:8px 0 8px 18px;border-bottom:0.5px solid var(--faint);position:relative}
+.s10-includes li::before{content:'—';position:absolute;left:0;color:var(--faint)}
+.s10-includes li:first-child{border-top:0.5px solid var(--faint)}
 
 /* ── s09 events card grid ── */
 .s09-ev-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:#1c1a18;margin-top:8px}
@@ -303,7 +309,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
     <li><a href="#s10">November 2026</a></li>
     <li><a href="#s09">Community</a></li>
     <li><a href="#s07">The team</a></li>
-    <li><a href="#s11">Contact</a></li>
+    <li><a href="#s11">Apply</a></li>
   </ul>
 </nav>
 
@@ -375,9 +381,14 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
   <div class="wrap">
     <span class="s-label reveal">October 2025, Puerto Escondido</span>
     <p class="s05-intro reveal">Eight participants. All first-time plant medicine experiences. Three months later, they still talk every day. They call each other familia. These are their exact words.</p>
+    <div class="s05-stats reveal">
+      <div><div class="s05-sn">8</div><div class="s05-sd">Participants. All first-time plant medicine.</div></div>
+      <div><div class="s05-sn">All</div><div class="s05-sd">Described it as the most meaningful experience of their lives.</div></div>
+      <div><div class="s05-sn">Daily</div><div class="s05-sd">The group still communicates, three months after the retreat ended.</div></div>
+    </div>
     <div class="s05-hero reveal">
-      <blockquote>"Not only the most meaningful event of 2025 but the most meaningful in my life by far. May you all continue to grow and live loving lives."</blockquote>
-      <cite>&mdash; Harvie</cite>
+      <blockquote>"Seven months later and I still think about it most days. How do you have an experience that stays with you like that? This journey is not easy. But when you are ready, it is life changing. Integration since our time has been everything. I am so grateful for what came out of that week."</blockquote>
+      <cite>&mdash; Steve</cite>
     </div>
     <div class="s05-lower reveal">
       <div class="s05-quotes">
@@ -386,11 +397,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
         <div class="s05-q"><blockquote>"Our experience was a once-in-a-lifetime kind. I feel so blessed to have walked this path with you."</blockquote><cite>&mdash; Thierry</cite></div>
       </div>
       <div class="s05-photo"><img src="img-testimonials.jpg" alt="The October 2025 Sacred Journeys retreat group"></div>
-    </div>
-    <div class="s05-stats reveal">
-      <div><div class="s05-sn">8</div><div class="s05-sd">Participants. All first-time plant medicine.</div></div>
-      <div><div class="s05-sn">All</div><div class="s05-sd">Described it as the most meaningful experience of their lives.</div></div>
-      <div><div class="s05-sn">Daily</div><div class="s05-sd">The group still communicates, three months after the retreat ended.</div></div>
     </div>
   </div>
 </section>
@@ -416,7 +422,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 
 <section class="s07" id="s07">
   <div class="wrap">
-    <span class="s-label reveal">The container is held by</span>
+    <span class="s-label reveal">The team</span>
     <p class="s07-intro reveal">Three people. Each one essential to what happens before, during, and after.</p>
     <div class="s07-grid reveal">
       <div>
@@ -446,7 +452,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
     <span class="s-label reveal">How the container works</span>
     <div class="s08-phases reveal">
       <div class="s08-phase"><div class="s08-n">01</div><div class="s08-name">Preparation</div><p class="s08-desc">The work begins before you arrive. Every participant has a personal conversation with the team before being accepted. Intention setting, preparation guidance, and connection with the team. The ceremony is more powerful when everyone in the room is meant to be there.</p></div>
-      <div class="s08-phase"><div class="s08-n">02</div><div class="s08-name">Ceremony</div><p class="s08-desc">Seven days in Puerto Escondido. Sacred plant medicine with Humberto. Sound healing and space-holding with Aleck, Allie and Trevor. A small, curated group of people who were meant to be in the room together.</p></div>
+      <div class="s08-phase"><div class="s08-n">02</div><div class="s08-name">Ceremony</div><p class="s08-desc">Seven days in Puerto Escondido. Sacred plant medicine with Humberto. Ayahuasca, Bufo, Kambo, and Satori. Each medicine chosen with intention. This is a genuine introduction to sacred medicine, held in a container that is safe, structured, and beginner friendly. Sound healing and space-holding with Aleck, Allie and Trevor. A small, curated group of people who were meant to be in the room together.</p></div>
       <div class="s08-phase"><div class="s08-n">03</div><div class="s08-name">Integration</div><p class="s08-desc">The ceremony reveals. Integration is where transformation stabilizes. Ongoing community support. A group that stays active. The work does not end when you return home. That is when it begins.</p></div>
     </div>
     <div class="s08-pull reveal"><p>"Most containers end when you leave. This one is designed for what happens when you return home."</p></div>
@@ -544,11 +550,19 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
       <div class="s10-facts">
         <div class="s10-fact"><div class="s10-fl">Dates</div><div class="s10-fv">Late November 2026</div></div>
         <div class="s10-fact"><div class="s10-fl">Capacity</div><div class="s10-fv">10&ndash;15 people</div></div>
-        <div class="s10-fact"><div class="s10-fl">Investment</div><div class="s10-fv">$2,000&ndash;3,000 USD</div></div>
+        <div class="s10-fact"><div class="s10-fl">Investment</div><div class="s10-fv">$2,300&ndash;3,000 USD</div></div>
         <div class="s10-fact"><div class="s10-fl">Location</div><div class="s10-fv">Puerto Escondido</div></div>
       </div>
+      <ul class="s10-includes">
+        <li>Seven nights accommodation</li>
+        <li>All meals</li>
+        <li>Excursions</li>
+        <li>Three ceremonies</li>
+        <li>Pre-retreat preparation</li>
+        <li>Three months post-retreat integration support</li>
+      </ul>
       <a href="https://instagram.com/sacredjourneys.co" class="s10-cta" target="_blank">Message Trevor on Instagram</a>
-      <p class="s10-note">No forms. No checkout links. A conversation.<br>The right people find this through alignment.</p>
+      <p class="s10-note">No forms. No checkout links. A conversation.<br>The right people find this through alignment.<br>Reach out and we'll talk. If it's a fit, I'll send you the full details.</p>
     </div>
   </div>
 </section>
