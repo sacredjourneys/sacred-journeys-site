@@ -252,14 +252,12 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 /* ── s02-statement ── */
 .s02-statement{font-family:var(--serif);font-size:clamp(22px,2.8vw,34px);font-weight:300;font-style:italic;color:var(--ink);line-height:1.32;margin-top:48px;padding-top:40px;border-top:0.5px solid var(--faint);max-width:unset}
 
-/* ── s-break full-bleed quote ── */
-.s-break{background:#080705;padding:140px 56px;text-align:center;position:relative}
-.s-break blockquote{font-family:var(--serif);font-size:clamp(22px,3vw,43px);font-weight:300;font-style:italic;color:var(--off);line-height:1.22;max-width:800px;margin:0 auto;position:relative;z-index:1}
-@media(max-width:860px){.s-break{padding:80px 24px}}
-@media(min-width:861px){
-  .s-break{background-image:url('img-origin.jpg');background-size:cover;background-position:center 30%}
-  .s-break::before{content:'';position:absolute;inset:0;background:rgba(5,4,3,0.80)}
-}
+/* ── s04 closing quote ── */
+.s04-quote{margin-top:72px;padding-top:56px;border-top:0.5px solid #2c2a28;text-align:center}
+.s04-quote blockquote{font-family:var(--serif);font-size:clamp(20px,2.6vw,38px);font-weight:300;font-style:italic;color:var(--off);line-height:1.32;max-width:740px;margin:0 auto}
+.s04-quote blockquote span{display:block}
+.s04-quote blockquote .q-gap{margin-top:0.6em}
+@media(max-width:860px){.s04-quote{margin-top:48px;padding-top:40px;padding-bottom:4px}}
 
 /* ── s03 vertical stacked problem blocks ── */
 .s03-four{display:flex;flex-direction:column;border:none;border-top:0.5px solid var(--faint);margin:44px 0 64px}
@@ -374,11 +372,15 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
         <p>This is initiation into your next chapter. Not a reset. Not a vacation. Not spiritual tourism.</p>
       </div>
     </div>
+    <div class="s04-quote reveal">
+      <blockquote>
+        <span>The container goes into the wound.</span>
+        <span>Not around it.</span>
+        <span class="q-gap">You do not come here to escape.</span>
+        <span>You come here to finally face what is real.</span>
+      </blockquote>
+    </div>
   </div>
-</section>
-
-<section class="s-break">
-  <blockquote class="reveal">The container goes into the wound.<br>Not around it.<br>You do not come here to escape.<br>You come here to finally face what is real.</blockquote>
 </section>
 
 <section class="s05" id="s05">
