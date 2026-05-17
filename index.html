@@ -265,7 +265,17 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .s04-quote blockquote{font-family:var(--serif);font-size:clamp(20px,2.6vw,38px);font-weight:300;font-style:italic;color:var(--off);line-height:1.32;max-width:740px;margin:0 auto}
 .s04-quote blockquote span{display:block}
 .s04-quote blockquote .q-gap{margin-top:0.6em}
-@media(max-width:860px){.s04-quote{margin-top:48px;padding-top:40px;padding-bottom:4px}}
+@media(max-width:860px){
+  .s04{padding-bottom:0}
+  .s04-quote{
+    border-top:none;
+    margin-top:60px;
+    margin-left:-24px;
+    margin-right:-24px;
+    padding:72px 24px 80px;
+    background:#080705;
+  }
+}
 
 /* ── s03 vertical stacked problem blocks ── */
 .s03-four{display:flex;flex-direction:column;border:none;border-top:0.5px solid var(--faint);margin:44px 0 64px}
