@@ -253,9 +253,13 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .s02-statement{font-family:var(--serif);font-size:clamp(22px,2.8vw,34px);font-weight:300;font-style:italic;color:var(--ink);line-height:1.32;margin-top:48px;padding-top:40px;border-top:0.5px solid var(--faint);max-width:unset}
 
 /* ── s-break full-bleed quote ── */
-.s-break{background:#080705;padding:140px 56px;text-align:center}
-.s-break blockquote{font-family:var(--serif);font-size:clamp(22px,3vw,43px);font-weight:300;font-style:italic;color:var(--off);line-height:1.22;max-width:800px;margin:0 auto}
+.s-break{background:#080705;padding:140px 56px;text-align:center;position:relative}
+.s-break blockquote{font-family:var(--serif);font-size:clamp(22px,3vw,43px);font-weight:300;font-style:italic;color:var(--off);line-height:1.22;max-width:800px;margin:0 auto;position:relative;z-index:1}
 @media(max-width:860px){.s-break{padding:80px 24px}}
+@media(min-width:861px){
+  .s-break{background-image:url('img-origin.jpg');background-size:cover;background-position:center 30%}
+  .s-break::before{content:'';position:absolute;inset:0;background:rgba(5,4,3,0.80)}
+}
 
 /* ── s03 vertical stacked problem blocks ── */
 .s03-four{display:flex;flex-direction:column;border:none;border-top:0.5px solid var(--faint);margin:44px 0 64px}
