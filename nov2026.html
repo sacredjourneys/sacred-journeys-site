@@ -101,11 +101,11 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .venue-dv{font-family:var(--serif);font-size:16px;color:var(--off);text-align:right}
 
 /* ── VENUE PHOTO STRIP ── */
-.s-venue-photos{display:grid;grid-template-columns:repeat(4,1fr);gap:3px;background:var(--ink)}
-.venue-photo{overflow:hidden;aspect-ratio:3/4}
+.s-venue-photos{display:grid;grid-template-columns:repeat(3,1fr);gap:3px;background:var(--ink)}
+.venue-photo{overflow:hidden;aspect-ratio:4/3}
 .venue-photo img{width:100%;height:100%;object-fit:cover;transition:transform 0.5s ease}
 .venue-photo:hover img{transform:scale(1.03)}
-.venue-photo.wide{grid-column:span 2;aspect-ratio:16/9}
+.venue-photo.wide{grid-column:span 3;aspect-ratio:16/9}
 
 /* ── ROOMS ── */
 .s-rooms{background:#fff;padding:100px 56px}
@@ -233,8 +233,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
   .medicine-item{grid-template-columns:1fr;gap:24px}
   .medicine-left{padding-right:0;border-bottom:0.5px solid #1a1816;padding-bottom:24px}
   .excursions-grid{grid-template-columns:1fr 1fr}
-  .s-venue-photos{grid-template-columns:1fr 1fr}
-  .venue-photo.wide{grid-column:span 2}
+  .s-venue-photos{grid-template-columns:repeat(3,1fr)}
+  .venue-photo.wide{grid-column:span 3}
   .s-imgbreak{height:45vh}
   .s-close{padding:80px 24px}
 }
@@ -400,25 +400,18 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 </section>
 
 <!-- VENUE PHOTO STRIP -->
-<!-- Images: exterior, pool+mural, rooftop ocean view, corridor arches, communal area pool view -->
 <div class="s-venue-photos">
   <div class="venue-photo wide">
-    <img src="img-venue-pool-mural.jpg" alt="Private pool and mural at Pineapple Mansion">
+    <img src="img-venue-pool-mural.jpg" alt="Courtyard and pool at Casa Pineapple">
   </div>
   <div class="venue-photo">
-    <img src="img-venue-corridor.jpg" alt="Arched corridor at Pineapple Mansion">
+    <img src="img-venue-corridor.jpg" alt="Open-air terrace at Casa Pineapple">
   </div>
   <div class="venue-photo">
-    <img src="img-venue-rooftop.jpg" alt="Rooftop dining with ocean view">
-  </div>
-  <div class="venue-photo wide">
     <img src="img-venue-communal.jpg" alt="Communal area looking through arch to pool">
   </div>
   <div class="venue-photo">
-    <img src="img-venue-room-1.jpg" alt="Double room with painted headboards">
-  </div>
-  <div class="venue-photo">
-    <img src="img-venue-room-2.jpg" alt="Double room with orange walls and artwork">
+    <img src="img-venue-rooftop.jpg" alt="Rooftop dining with ocean view">
   </div>
 </div>
 
