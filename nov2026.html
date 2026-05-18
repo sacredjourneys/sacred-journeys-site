@@ -990,7 +990,7 @@ document.querySelectorAll('.faq-q').forEach(q => {
       if(e.isIntersecting){ btn.classList.add('visible'); mo.unobserve(e.target); }
     });
   }, {threshold: 0.12});
-  mo.observe(document.getElementById('s-close'));
+  mo.observe(document.getElementById('s-faq'));
 
   btn.addEventListener('click', function(){
     if(!playing){
