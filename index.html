@@ -107,8 +107,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .s05-sd{font-size:12px;color:var(--mid);max-width:200px;line-height:1.65}
 .s06{background:var(--ink);color:var(--off);padding:100px 56px}
 .s06-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start}
-.s06-video{aspect-ratio:16/9;overflow:hidden;background:#000}
-.s06-video iframe{width:100%;height:100%;border:none;display:block}
+.s06-video{aspect-ratio:4/3;overflow:hidden;background:#000;position:relative}
+.s06-video iframe{position:absolute;top:50%;left:50%;width:133.4%;height:100%;transform:translate(-50%,-50%);border:none}
 .s06-cap{margin-top:12px;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:#555250}
 .s06-text .s-label{color:#555250}
 .s06-text h2{font-family:var(--serif);font-size:46px;font-weight:300;margin:8px 0 30px;line-height:1.08}
