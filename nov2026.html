@@ -69,6 +69,17 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .s-imgbreak.top{height:55vh}
 .s-imgbreak.top img{object-position:center 50%}
 
+/* ── TESTIMONIALS ── */
+.s-testimonials{background:var(--ink);color:var(--off);padding:100px 56px}
+.s-testimonials .s-label{color:#555250}
+.s-testimonials h2{font-family:var(--serif);font-size:clamp(34px,3.8vw,50px);font-weight:300;line-height:1.06;margin:8px 0 14px;color:var(--off)}
+.testimonials-context{font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:#444240;margin-bottom:56px}
+.testimonials-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:40px}
+.testimonial-video{width:100%;aspect-ratio:9/16;background:#000;overflow:hidden;margin-bottom:24px}
+.testimonial-video iframe{width:100%;height:100%;border:none;display:block}
+.testimonial-quote{font-family:var(--serif);font-size:clamp(17px,1.6vw,21px);font-weight:300;font-style:italic;color:var(--off);line-height:1.45;margin-bottom:14px}
+.testimonial-name{font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:#555250}
+
 /* ── INCLUDES ── */
 .s-includes{background:var(--cream);padding:100px 56px;border-top:0.5px solid var(--faint)}
 .includes-grid{display:grid;grid-template-columns:repeat(3,1fr);border:0.5px solid var(--faint);margin-top:44px}
@@ -232,7 +243,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
   .nav-ham{display:flex}
   .hero-content{padding:0 24px 72px}
   .hero-facts{flex-wrap:wrap;gap:28px}
-  .s-overview,.s-includes,.s-rooms,.s-schedule,.s-medicines,.s-excursions,.s-logistics,.s-faq,.s-next,.s-close{padding:60px 24px}
+  .s-overview,.s-includes,.s-testimonials,.s-rooms,.s-schedule,.s-medicines,.s-excursions,.s-logistics,.s-faq,.s-next,.s-close{padding:60px 24px}
+  .testimonials-grid{grid-template-columns:1fr;gap:56px}
   .next-steps{grid-template-columns:1fr}
   .s-venue-body{padding:60px 24px}
   .s-overview-grid,.venue-grid,.logistics-grid{grid-template-columns:1fr;gap:44px}
@@ -328,6 +340,42 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 <div class="s-imgbreak top">
   <img src="img-aleck-music.jpg" alt="Aleck playing ancestral instruments with ocean view behind">
 </div>
+
+<!-- TESTIMONIALS -->
+<section class="s-testimonials">
+  <div class="wrap">
+    <span class="s-label reveal">In their own words</span>
+    <h2 class="reveal">What people said<br><em>when they got home.</em></h2>
+    <p class="testimonials-context reveal">All three were first-time sacred plant medicine experiences.</p>
+    <div class="testimonials-grid reveal">
+
+      <div class="testimonial-card">
+        <div class="testimonial-video">
+          <iframe src="https://www.youtube.com/embed/60mHETI6DHA?rel=0" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <p class="testimonial-quote">"I feel like I did decades of inner work in a week."</p>
+        <div class="testimonial-name">Anna</div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-video">
+          <iframe src="https://www.youtube.com/embed/Um2dXbE--fM?rel=0" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <p class="testimonial-quote">"You could have charged me 10 times the amount and I would have said here, take it."</p>
+        <div class="testimonial-name">Harvie</div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-video">
+          <iframe src="https://www.youtube.com/embed/oB6rMJ68tIc?rel=0" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <p class="testimonial-quote">"The group was just as medicinal to me."</p>
+        <div class="testimonial-name">Liz</div>
+      </div>
+
+    </div>
+  </div>
+</section>
 
 <!-- INCLUDES -->
 <section class="s-includes">
