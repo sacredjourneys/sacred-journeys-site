@@ -101,11 +101,10 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .s05-sn{font-family:var(--serif);font-size:48px;font-weight:300;line-height:1;margin-bottom:8px}
 .s05-sd{font-size:12px;color:var(--mid);max-width:200px;line-height:1.65}
 .s06{background:var(--ink);color:var(--off);padding:100px 56px}
-.s06-grid{display:grid;grid-template-columns:5fr 7fr;gap:80px;align-items:center}
-/* Founder photo: 4:5 ratio, no black space */
-.s06-photo{aspect-ratio:4/5;overflow:hidden;position:relative}
-.s06-photo img{width:100%;height:100%;object-fit:cover;object-position:center 20%;filter:brightness(0.88) contrast(1.08) saturate(0.85)}
-.s06-cap{position:absolute;bottom:20px;left:20px;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(245,243,238,0.28)}
+.s06-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start}
+.s06-video{aspect-ratio:16/9;overflow:hidden;background:#000}
+.s06-video iframe{width:100%;height:100%;border:none;display:block}
+.s06-cap{margin-top:12px;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:#555250}
 .s06-text .s-label{color:#555250}
 .s06-text h2{font-family:var(--serif);font-size:46px;font-weight:300;margin:8px 0 30px;line-height:1.08}
 .s06-text p{font-size:15px;color:#888583;line-height:1.92;margin-bottom:22px}
@@ -436,8 +435,10 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 <section class="s06" id="s06">
   <div class="wrap">
     <div class="s06-grid reveal">
-      <div class="s06-photo">
-        <img src="img-founder.jpg" alt="Trevor Johnston, founder of Sacred Journeys" loading="lazy">
+      <div>
+        <div class="s06-video">
+          <iframe src="https://www.youtube.com/embed/leQwgCcvTss?rel=0" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
         <span class="s06-cap">Trevor Johnston, Founder</span>
       </div>
       <div class="s06-text">
