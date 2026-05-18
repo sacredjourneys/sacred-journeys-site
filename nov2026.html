@@ -118,7 +118,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .s-venue h2 em{font-style:italic}
 .venue-desc{font-size:15px;color:#888583;line-height:1.9;margin-bottom:22px}
 .venue-amenities{display:grid;grid-template-columns:1fr 1fr;gap:0;border:0.5px solid #2c2a28;margin-top:40px}
-.venue-am{padding:18px 20px;border-right:0.5px solid #2c2a28;border-bottom:0.5px solid #2c2a28;font-size:13px;color:#888583}
+.venue-am{padding:18px 20px;border-right:0.5px solid #2c2a28;border-bottom:0.5px solid #2c2a28;font-size:13px;color:#c8c5c0}
 .venue-am:nth-child(2n){border-right:none}
 .venue-am:nth-last-child(-n+2){border-bottom:none}
 .venue-am span{color:#888583;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;display:block;margin-bottom:3px}
@@ -131,13 +131,15 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .venue-dv{font-family:var(--serif);font-size:16px;color:var(--off);text-align:right}
 
 /* ── VENUE PHOTO STRIP ── */
-.s-venue-photos{display:grid;grid-template-columns:1fr 1fr 1fr;grid-template-rows:300px 300px;gap:3px;background:var(--ink)}
-.venue-photo img{width:100%;height:100%;object-fit:cover;transition:transform 0.5s ease}
-.venue-photo:hover img{transform:scale(1.03)}
+.s-venue-photos{display:grid;grid-template-columns:1fr 1fr 1fr;grid-template-rows:380px 380px;gap:4px;background:var(--ink)}
+.venue-photo img{width:100%;height:100%;object-fit:cover;transition:filter 0.4s ease}
+.venue-photo:hover img{filter:brightness(1.08)}
 .vp-feature{overflow:hidden;grid-column:1;grid-row:1/3}
-.vp-feature img{object-position:15% 50%}
+.vp-feature img{object-position:center 45%}
 .vp-sm{overflow:hidden}
 .vp-wide{overflow:hidden;grid-column:2/4;grid-row:2}
+.vp-wide img{object-position:center 60%}
+.venue-photo-caption{padding:18px 0;text-align:center;font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:#555250;background:var(--ink)}
 
 /* ── ROOMS ── */
 .s-rooms{background:#fff;padding:100px 56px}
@@ -457,7 +459,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
       <img src="img-venue-pool-mural.jpg" alt="Courtyard and pool at Casa Pineapple">
     </div>
     <div class="venue-photo vp-sm">
-      <img src="img-venue-corridor.jpg" alt="Open-air terrace at Casa Pineapple">
+      <img src="img-venue-suite.jpg" alt="King suite at Casa Pineapple" style="object-position:center 30%">
     </div>
     <div class="venue-photo vp-sm">
       <img src="img-venue-communal.jpg" alt="Communal area looking through arch to pool">
@@ -466,6 +468,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
       <img src="img-venue-rooftop.jpg" alt="Rooftop dining with ocean view">
     </div>
   </div>
+  <div class="venue-photo-caption">The Pineapple Mansion, La Barra &nbsp;&middot;&nbsp; Exclusive use, November 23&ndash;30</div>
 
   <div class="s-venue-body">
   <div class="wrap">
@@ -486,7 +489,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
         </div>
       </div>
       <div class="venue-right">
-        <p class="venue-pull">"The whole energy of this space is designed for presence. Connection to nature, integration, and deep inner work."</p>
+        <p class="venue-pull">The whole energy of this space is designed for presence. Connection to nature, integration, and deep inner work.</p>
         <div class="venue-details">
           <div class="venue-detail"><span class="venue-dl">Address</span><span class="venue-dv">La Barra, Puerto Escondido, Oaxaca</span></div>
           <div class="venue-detail"><span class="venue-dl">Check-in</span><span class="venue-dv">November 23, 2026</span></div>
