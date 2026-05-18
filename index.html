@@ -320,6 +320,12 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .s09-ev-card-name{font-family:var(--serif);font-size:15px;font-weight:400;color:var(--off);margin-bottom:4px;line-height:1.2}
 .s09-ev-card-desc{font-size:11px;color:#555250;line-height:1.65}
 @media(max-width:860px){.s09-ev-card{padding:16px 12px;gap:10px}.s09-ev-card-name{font-size:14px}.s09-ev-card-desc{font-size:10px}}
+/* ── Music player ── */
+.music-btn{position:fixed;bottom:28px;right:28px;z-index:300;display:flex;align-items:center;gap:9px;background:rgba(15,14,12,0.85);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);color:var(--off);border:0.5px solid #2c2a28;border-radius:100px;padding:10px 20px 10px 14px;font-family:var(--sans);font-size:10px;letter-spacing:0.16em;text-transform:uppercase;cursor:pointer;opacity:0;pointer-events:none;transform:translateY(6px);transition:opacity 0.7s ease,transform 0.7s ease,background 0.2s}
+.music-btn.visible{opacity:1;pointer-events:auto;transform:none}
+.music-btn:hover{background:rgba(35,32,28,0.96)}
+.music-icon{width:13px;height:13px;opacity:0.6;flex-shrink:0;transition:opacity 0.2s}
+.music-btn.playing .music-icon{opacity:1}
 </style>
 </head>
 <body>
@@ -625,6 +631,54 @@ document.querySelectorAll('.s01 .reveal').forEach(el=>{
   });
   links.querySelectorAll('a').forEach(function(a){
     a.addEventListener('click',function(){links.classList.remove('open')});
+  });
+})();
+</script>
+
+<audio id="sj-audio" src="music.mp3" loop preload="none"></audio>
+<button class="music-btn" id="musicBtn" aria-label="Play sacred anthem">
+  <svg class="music-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+  <span id="musicLabel">Sacred Anthem</span>
+</button>
+
+<script>
+(function(){
+  var audio = document.getElementById('sj-audio');
+  var btn   = document.getElementById('musicBtn');
+  var label = document.getElementById('musicLabel');
+  var playing = false, muted = false;
+
+  // Reveal button when s11 enters view
+  var mo = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){ btn.classList.add('visible'); mo.unobserve(e.target); }
+    });
+  }, {threshold: 0.12});
+  mo.observe(document.getElementById('s11'));
+
+  btn.addEventListener('click', function(){
+    if(!playing){
+      audio.volume = 0;
+      audio.play().then(function(){
+        playing = true;
+        btn.classList.add('playing');
+        label.textContent = 'Mute';
+        var vol = 0;
+        var fade = setInterval(function(){
+          vol = Math.min(vol + 0.01, 0.48);
+          audio.volume = vol;
+          if(vol >= 0.48) clearInterval(fade);
+        }, 80);
+      }).catch(function(){});
+    } else if(!muted){
+      audio.muted = true; muted = true;
+      label.textContent = 'Unmute';
+      btn.classList.remove('playing');
+    } else {
+      audio.muted = false; muted = false;
+      label.textContent = 'Mute';
+      btn.classList.add('playing');
+    }
   });
 })();
 </script>
